@@ -1,0 +1,141 @@
+/* Button Hover Animations */
+#search-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #search-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Loading Spinner */
+  #loading-spinner {
+    margin: 20px auto;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #4CAF50;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Results Animation */
+  #results-list li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+  }
+  
+  #results-list li.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Fade-in animation for results */
+#results-list li {
+    transition: all 0.5s ease-out;
+  }
+  
+  #results-list .result-item {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #results-list .result-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  #results-list .result-item span {
+    font-weight: bold;
+    color: #4CAF50;
+  }
+  /* Wrapper for input and results section */
+#input-results-section {
+    width: 40%; /* Takes a part of the page */
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #f9f9f9; /* Light background for contrast */
+    border-right: 2px solid #ddd; /* Creates separation line */
+  }
+  
+  /* Map Section */
+  #map-section {
+    width: 60%; /* Remaining width for the map */
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+  }
+  
+  /* Ensure content fits responsively */
+  #container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Make container full height */
+  }
+  
+  /* Fix list styling in input-results section */
+  #results-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    overflow-y: auto;
+    max-height: 70vh; /* Allow scrollable results if too many */
+  }
+  
+  /* Add spacing between the sections visually */
+  #results-list li {
+    margin-bottom: 10px;
+  }
+  
+  /* Prevent overlap with buttons and input fields */
+  #city-input, #search-button {
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+  }
+  
+  /* Responsive Design for Small Screens */
+  @media (max-width: 768px) {
+    #container {
+      flex-direction: column;
+    }
+  
+    #input-results-section,
+    #map-section {
+      width: 100%; /* Stack sections vertically */
+      float: none;
+      border-right: none;
+      border-bottom: 2px solid #ddd; /* Divider for stacked layout */
+    }
+  }
+  
+  
